@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Светозар Антонов](https://up.htmlacademy.ru/adaptive/12/user/359767).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Кудин].
 
 ---
 
