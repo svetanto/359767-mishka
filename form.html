@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Мишка — Вязание на заказ</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="http://placehold.it/150x100" width="150" height="100" alt="Мишка">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a>Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <header class="secondary-header">
+        <h1 class="secondary-header__title">Вязание на заказ</h1>
+      </header>
+
+      <form class="orderform" action="https://echo.htmlacademy.ru" method="post">
+
+        <p class="orderform__title">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+        <fieldset class="orderform__group">
+          <legend class="orderform__legend">Тип</legend>
+          <input type="radio" name="item-type" id="item-type1" value="interior-accessory" checked>
+          <label for="item-type1">Аксессуар для интерьера</label>
+          <br>
+          <input type="radio" name="item-type" id="item-type2" value="kids-toy">
+          <label for="item-type2">Детская игрушка</label>
+        </fieldset>
+
+        <fieldset class="orderform__group">
+          <legend class="orderform__legend">Цвет</legend>
+          <input type="checkbox" name="white" id="item-color1" checked>
+          <label for="item-color1">Белый</label>
+          <br>
+          <input type="checkbox" name="gray" id="item-color2" checked>
+          <label for="item-color2">Серый</label>
+          <br>
+          <input type="checkbox" name="tiffany" id="item-color3">
+          <label for="item-color3">«Тиффани»</label>
+          <br>
+          <input type="checkbox" name="black" id="item-color4">
+          <label for="item-color4">Чёрный</label>
+          <br>
+          <input type="checkbox" name="pink" id="item-color5">
+          <label for="item-color5">Розовый</label>
+          <br>
+          <input type="checkbox" name="orange" id="item-color6">
+          <label for="item-color6">Оранжевый</label>
+        </fieldset>
+
+        <fieldset class="orderform__group">
+          <legend class="orderform__legend">Фио</legend>
+          <label for="name">Имя:</label><br>
+          <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required><br>
+          <label for="surname">Фамилия:</label><br>
+          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required><br>
+          <label for="patronymic">Отчество:</label><br>
+          <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+        </fieldset>
+
+        <fieldset class="orderform__group">
+          <legend class="orderform__legend">Тел</legend>
+          <input type="tel" name="tel" pattern="\+[0-9]{1} \([0-9]{3}\) [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 (XXX) XXX XX XX*" required>
+        </fieldset>
+
+        <fieldset class="orderform__group">
+          <legend class="orderform__legend">e-mail</legend>
+          <input type="email" name="email" placeholder="Ваш Email*" required>
+        </fieldset>
+
+        <fieldset class="orderform__group">
+          <legend class="orderform__legend">доп</legend>
+          <textarea name="add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+
+        <p class="orderform__hint">* Поля обязательны для заполнения</p>
+
+        <button class="orderform__button button" type="submit">Отправить заказ</button>
+
+      </form>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/mimimishkashop">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/mimimishkashop">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/mimimishkashop">Мы в Вконтакте</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+
+      </div>
+    </footer>
+
+  </body>
+</html>
