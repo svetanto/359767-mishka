@@ -62,3 +62,20 @@ git add .
 git commit -m "Внес правку для соотвествия БЭМ"
 git push
 exit
+git add .
+git status
+git commit -m "Сделана разметка страниц каталога и формы"
+pwd
+git push
+ssh -T git@github.com
+ssh-add /c/Users/Star/.ssh/id_rsa
+eval "$(ssh-agent -s)"
+ssh-add /c/Users/Star/.ssh/id_rsa
+git push
+ssh -T git@github.com
+exit
+git push
+eval "$(ssh-agent -s)"
+ssh-add /c/Users/Star/.ssh/id_rsa
+ssh -T git@github.com
+exit
