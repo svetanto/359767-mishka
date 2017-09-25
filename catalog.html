@@ -49,7 +49,7 @@
 
     <main class="page-main">
 
-      <header class="main-header_main-header--secondary">
+      <header class="main-header main-header--secondary">
         <h1 class="main-header__title">Каталог товаров</h1>
       </header>
 
@@ -116,6 +116,23 @@
 
       </div>
     </footer>
+
+    <!--Модальное окно для выбора размера и добавления в корзину-->
+    <div class="cart-popup popup-overlay">
+      <div class="cart-popup__wrapper">
+        <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="cart-popup__title">Добавить в корзину</h2>
+          <p class="cart-popup__msg">Выберите размер:</p>
+          <input class="cart-popup__input" type="radio" name="size" id="small" value="small" checked>
+          <input class="cart-popup__input" type="radio" name="size" id="middle" value="middle">
+          <input class="cart-popup__input" type="radio" name="size" id="large" value="large">
+          <label class="cart-popup__label" for="small">S</label>
+          <label class="cart-popup__label" for="middle">M</label>
+          <label class="cart-popup__label" for="large">L</label>
+          <button class="cart-popup__button button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 </html>
