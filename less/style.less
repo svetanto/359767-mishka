@@ -44,6 +44,11 @@ h2 {
   line-height: 30px;
   font-weight: bold;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .button {
   display: block;
   height: 52px;
@@ -56,5 +61,20 @@ h2 {
   border: 2px solid #444444;
   padding-top: 13px;
 }
+.wrapper {
+  width: @global-width * 0.8125;
+  .hc;
+}
+.divider {
+  width: @global-width;
+  height: 30px;
+  background: url("../img/zigzag.svg") repeat-x;
+}
+
 @import 'blocks/page-header.less';
 @import 'blocks/page-main.less';
+@import 'blocks/page-footer.less';
+
+
+
+@import 'blocks/cart-popup.less';
