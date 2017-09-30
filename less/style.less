@@ -1,80 +1,27 @@
+@import 'fonts.less';
+@import 'scaffolding.less';
 @import 'variables.less';
 @import 'mixins.less';
 
-/*Подключение шрифта OpenSans в начертании Normal из локальной папки проекта*/
-@font-face {
-    font-family: 'Open Sans', sans-serif;
-    src: local('Open Sans'), local('OpenSans'),
-      url('../fonts/opensans.woff2') format('woff2'),
-      url('../fonts/opensans.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-/*Подключение шрифта OpenSans в начертании Bold из локальной папки проекта*/
-@font-face {
-    font-family: 'Open Sans', sans-serif;
-    src: local('Open Sans Bold'), local('OpenSans-Bold'),
-      url('../fonts/opensansbold.woff2') format('woff2'),
-      url('../fonts/opensansbold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-a {
-  text-decoration: none;
-}
-body {
-  width: @global-width;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #444444;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
-}
-h2 {
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: bold;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.button {
-  display: block;
-  height: 52px;
-  text-transform: uppercase;
-  font-size: 17px;
-  font-weight: bold;
-  color: #444444;
-  text-align: center;
-  vertical-align: middle;
-  border: 2px solid #444444;
-  padding-top: 13px;
-}
-.wrapper {
-  width: @global-width * 0.8125;
-  .hc;
-}
-.divider {
-  width: @global-width;
-  height: 30px;
-  background: url("../img/zigzag.svg") repeat-x;
-}
+// Стили главной
+@import 'blocks/logo/logo.less';
+@import 'blocks/main-nav/main-nav.less';
 
-@import 'blocks/page-header.less';
-@import 'blocks/page-main.less';
-@import 'blocks/page-footer.less';
+@import 'blocks/main-header/main-header.less';
+@import 'blocks/popular/popular.less';
+@import 'blocks/week-product/week-product.less';
+@import 'blocks/about/about.less';
+@import 'blocks/reviews/reviews.less';
+@import 'blocks/contacts/contacts.less';
+
+@import 'blocks/page-footer/page-footer.less';
+@import 'blocks/social/social.less';
+@import 'blocks/copyright/copyright.less';
+
+// Стили каталога
+@import 'blocks/itemcard/itemcard.less';
+@import 'blocks/production/production.less';
 
 
-
-@import 'blocks/cart-popup.less';
+// Стили модальных окон
+@import 'blocks/cart-popup/cart-popup.less';

@@ -9,8 +9,8 @@
 
     <header class="page-header">
       <div class="logo">
-        <a class="logo__link">
-          <img class="logo__img" src="http://placehold.it/150x100" width="150" height="100" alt="Мишка">
+        <a class="logo__link logo__link--secondary">
+          <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
       </div>
       <nav class="main-nav">
@@ -53,50 +53,61 @@
       <header class="main-header main-header--secondary">
         <h1 class="main-header__title">Каталог товаров</h1>
       </header>
+      <div class="wrapper">
 
-      <ul class="itemcards">
-        <li class="itemcards__item">
-          <img class="itemcards__photo" src="http://placehold.it/150x100" width="150" height="100" alt="Зайчик-попрыгайчик">
-          <h2 class="itemcards__name">Зайчик-попрыгайчик</h2>
-          <p class="itemcards__spec">Рост 30 см, вес 200 г</p>
-          <p class="itemcards__price-cart">
-            <span class="itemcards__price">1 200 руб.</span>
-            <img class="itemcards__cart" src="http://placehold.it/150x100" width="150" height="100" alt="Иконка корзины">
-          </p>
-        </li>
-        <li class="itemcards__item">
-          <img class="itemcards__photo" src="http://placehold.it/150x100" width="150" height="100" alt="Корзинка для белья">
-          <h2 class="itemcards__name">Корзинка для белья</h2>
-          <p class="itemcards__spec">Диаметр 15 см, высота 10 см</p>
-          <p class="itemcards__price-cart">
-            <span class="itemcards__price">1 200 руб.</span>
-            <img class="itemcards__cart" src="http://placehold.it/150x100" width="150" height="100" alt="Иконка корзины">
-          </p>        </li>
-        <li class="itemcards__item">
-          <img class="itemcards__photo" src="http://placehold.it/150x100" width="150" height="100" alt="Большая корзинка для игрушек">
-          <h2 class="itemcards__name">Большая корзинка для игрушек</h2>
-          <p class="itemcards__spec">Диаметр 30 см, высота 30 см</p>
-          <p class="itemcards__price-cart">
-            <span class="itemcards__price">1 200 руб.</span>
-            <img class="itemcards__cart" src="http://placehold.it/150x100" width="150" height="100" alt="Иконка корзины">
-          </p>        </li>
-      </ul>
+        <ul class="itemcards">
+          <li class="itemcard">
+            <img class="itemcard__photo" src="img/photo-hare-mobile@1x.jpg" width="258" height="195" alt="Зайчик-попрыгайчик">
+            <div class="itemcard__name-spec">
+              <span class="itemcard__name">Зайчик-попрыгайчик</span>
+              <p class="itemcard__spec">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="itemcard__price-cart">
+              <span class="itemcard__price">1 200 руб.</span>
+              <a class="itemcard__cart">Корзина</a>
+            </div>
+          </li>
+          <li class="itemcard">
+            <img class="itemcard__photo" src="img/photo-bowl-mobile@1x.jpg" width="258" height="195" alt="Корзинка для белья">
+            <div class="itemcard__name-spec">
+              <span class="itemcard__name">Корзинка для белья</span>
+              <p class="itemcard__spec">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="itemcard__price-cart">
+              <span class="itemcard__price">690 руб.</span>
+              <a class="itemcard__cart">Корзина</a>
+            </div>
+          </li>
+          <li class="itemcard">
+            <img class="itemcard__photo" src="img/photo-toys-mobile@1x.jpg" width="258" height="195" alt="Большая корзинка для игрушек">
+            <div class="itemcard__name-spec">
+              <span class="itemcard__name">Большая корзинка для игрушек</span>
+              <p class="itemcard__spec">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="itemcard__price-cart">
+              <span class="itemcard__price">1 500 руб.</span>
+              <a class="itemcard__cart">Корзина</a>
+            </div>
+          </li>
+        </ul>
 
-      <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
-        <div class="production__video">
-          <img class="production__pic" src="http://placehold.it/150x100" width="150" height="100" alt="Заставка видео">
-        </div>
-        <p class="production__annotation">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__link button" href="#">Сделать заказ</a>
-      </section>
+        <section class="production">
+          <div class="production__icon-title">
+            <div class="production__icon"></div>
+            <span class="production__title">Процесс производства</span>
+          </div>
+          <div class="production__video"></div>
+          <p class="production__annotation">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__link button" href="#">Сделать заказ</a>
+        </section>
 
+      </div>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper wrapper">
 
-        <div class="page-footer__social social">
+        <div class="social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/mimimishkashop">Мы в Инстаграме</a>
@@ -105,14 +116,13 @@
               <a class="social__link social__link--facebook" href="https://www.facebook.com/mimimishkashop">Мы в Фейсбуке</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/mimimishkashop">Мы в Вконтакте</a>
+              <a class="social__link social__link--twitter" href="https://vk.com/mimimishkashop">Мы в Вконтакте</a>
             </li>
           </ul>
         </div>
 
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="copyright wrapper">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="copyright__text">Разработано</span><div class="copyright__img"></div></a>
         </div>
 
       </div>
