@@ -1,33 +1,39 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*, *::before, *::after {
   box-sizing: inherit;
 }
+
 a {
   text-decoration: none;
 }
+
 body {
   width: @mobile-width;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   color: #444444;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
 }
+
 h2 {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
 }
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .button {
   margin: 0 auto;
   display: block;
@@ -42,15 +48,18 @@ ul {
   padding-top: 13px;
   background-color: transparent;
 }
+
 .wrapper {
   width: 260px;
   margin: 0 auto;
 }
+
 .divider {
   width: @mobile-width;
   height: 30px;
   background: url("../img/zigzag.svg") repeat-x;
 }
+
 .text-17-18b {
   font-size: 17px;
   line-height: 18px;
