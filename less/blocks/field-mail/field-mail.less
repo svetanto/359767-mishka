@@ -1,0 +1,28 @@
+// E-mail
+.field-mail__input {
+  width: 260px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #000000;
+  .textstyle(17px, 18px, normal);
+  padding-bottom: 15px;
+  margin-bottom: 17px;
+  &:hover, &:focus {
+    border-color: #62d1ba;
+    outline: none;
+  }
+}
+
+.field-mail__mail-icon {
+  position: absolute;
+  width: 32px;
+  height: 21px;
+  background: url("../img/mail-sprite.svg") no-repeat;
+  left: 223px;
+  top: 43px;
+}
+
+.field-mail__input:hover ~ .field-mail__mail-icon,
+.field-mail__input:focus ~ .field-mail__mail-icon {
+  background-position-y: -21px;
+}

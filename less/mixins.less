@@ -1,7 +1,21 @@
-.heading1-textstyle() {
+.heading(@level) when (@level = 1) {
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  color: #010000;
+  color: #000000;
+}
+
+.heading(@level) when (@level = 2) {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+}
+
+.textstyle(@fsize: 17px, @lheight: 18px, @fweight: bold) {
+  font-size: @fsize;
+  line-height: @lheight;
+  font-weight: @fweight;
 }

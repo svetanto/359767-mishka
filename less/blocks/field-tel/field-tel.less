@@ -1,0 +1,28 @@
+// Телефон
+.field-tel__input {
+  width: 260px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #000000;
+  .textstyle(17px, 18px, normal);
+  padding-bottom: 15px;
+  margin-bottom: 17px;
+  &:hover, &:focus {
+    border-color: #62d1ba;
+    outline: none;
+  }
+}
+
+.field-tel__tel-icon {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  background: url("../img/tel-sprite.svg") no-repeat;
+  left: 225px;
+  top: 40px;
+}
+
+.field-tel__input:hover ~ .field-tel__tel-icon,
+.field-tel__input:focus ~ .field-tel__tel-icon {
+  background-position-y: -24px;
+}
