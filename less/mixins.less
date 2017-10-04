@@ -1,0 +1,29 @@
+.heading(@level) when (@level = 1) {
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+.heading(@level) when (@level = 2) {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+}
+
+.textstyle(@fsize: 17px, @lheight: 18px, @fweight: bold) {
+  font-size: @fsize;
+  line-height: @lheight;
+  font-weight: @fweight;
+}
+
+.liststyle() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
