@@ -25,10 +25,10 @@
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item nomobile notablet">
               <a class="site-list__link" href="form.html">Новые поступления</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item nomobile notablet">
               <a class="site-list__link" href="form.html">Распродажа</a>
             </li>
           </ul>
@@ -40,7 +40,7 @@
             <li class="user-list__item">
               <a class="user-list__cart" href="#">Корзина</a>
             </li>
-            <li class="user-list__item">
+            <li class="user-list__item nomobile">
               <a class="user-list__delivery" href="#">Бесплатная доставка по России</a>
             </li>
           </ul>
@@ -175,17 +175,19 @@
     </footer>
 
 <!--Модальное окно для выбора размера и добавления в корзину-->
-    <div class="cart-popup popup-overlay">
+    <div class="cart-popup">
       <div class="cart-popup__wrapper">
-        <form class="cart-popup__form" action="https://echo.htmlacademy.ru" method="post">
-          <h2 class="cart-popup__title">Добавить в корзину</h2>
+        <form class="cart-popup__form wrapper" action="https://echo.htmlacademy.ru" method="post">
+          <h1 class="cart-popup__title">Добавить<br>в корзину</h1>
           <p class="cart-popup__msg">Выберите размер:</p>
-          <input class="cart-popup__input" type="radio" name="size" id="small" value="small" checked>
-          <input class="cart-popup__input" type="radio" name="size" id="middle" value="middle">
-          <input class="cart-popup__input" type="radio" name="size" id="large" value="large">
-          <label class="cart-popup__label" for="small">S</label>
-          <label class="cart-popup__label" for="middle">M</label>
-          <label class="cart-popup__label" for="large">L</label>
+          <div class="cart-popup__radio-wrapper">
+            <input class="cart-popup__input" type="radio" name="size" id="small" value="small" checked>
+            <label class="cart-popup__label" for="small">S</label>
+            <input class="cart-popup__input" type="radio" name="size" id="middle" value="middle">
+            <label class="cart-popup__label" for="middle">M</label>
+            <input class="cart-popup__input" type="radio" name="size" id="large" value="large">
+            <label class="cart-popup__label" for="large">L</label>
+          </div>
           <button class="cart-popup__button button" type="submit">Добавить</button>
         </form>
       </div>
