@@ -10,6 +10,7 @@
   background: transparent url("../img/icon-menu-open.svg") no-repeat center;
   border: none;
   outline: none;
+
   &:active {
     background-image: url("../img/icon-menu-close.svg");
   }
@@ -18,19 +19,16 @@
 .main-nav {
   position: relative;
   width: @mobile-width;
-  min-height: 51px;
   margin: 0 auto;
   background-color: #ffffff;
 }
-
-
 
 .main-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
   .textstyle();
-  // display: none;
+  display: none;
 }
 
 .site-list__item,
@@ -56,7 +54,6 @@
 .user-list__item:first-child::before {
   background: url("../img/icon-search.svg") no-repeat center;
 }
-
 
 .nomobile {
   display: none;
