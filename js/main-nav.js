@@ -10,11 +10,14 @@ var mobile_menu = document.querySelector(".main-nav__wrapper");
 menu_toggle_button.classList.remove("main-nav__toggle--nojs");
 mobile_menu.classList.add("main-nav--closed");
 
-// alert("dnkvfsdkl");
-
 menu_toggle_button.addEventListener("click", function(evt) {
   evt.preventDefault();
-  if (menu_toggle_button.classList.contains("main-nav__toggle--closed")) {
+  menu_toggle_button.classList.toggle("main-nav__toggle--open");
+  mobile_menu.classList.toggle("main-nav--open");
+});
+
+
+/*  if (menu_toggle_button.classList.contains("main-nav__toggle--closed")) {
     menu_toggle_button.classList.remove("main-nav__toggle--closed");
     menu_toggle_button.classList.add("main-nav__toggle--open");
     mobile_menu.classList.remove("main-nav--closed");
@@ -26,6 +29,9 @@ menu_toggle_button.addEventListener("click", function(evt) {
     mobile_menu.classList.add("main-nav--closed");
   }
 });
+
+
+// alert("dnkvfsdkl");
 
 // Открытие и закрытие модального окна с формой обратной связи
 /*var feedback_open = document.querySelector(".write-us");
