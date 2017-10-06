@@ -3,42 +3,35 @@
   display: none;
 }
 
-.field-item-type__wrapper {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .field-item-type__label {
   cursor: pointer;
-  margin: 0;
   display: block;
+  position: relative;
+  .textstyle();
+  margin-left: 61px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 160px;
+}
+
+.field-item-type__label::before {
+  position: absolute;
+  content: "";
   width: 40px;
   height: 40px;
   border: 2px solid #000000;
   border-radius: 50%;
+  left: -63px;
+  top: -10px;
 }
 
-.field-item-type__name-text1,
-.field-item-type__name-text2 {
-  display: block;
-  width: 160px;
-  margin-left: 20px;
-  .textstyle();
-}
-
-.field-item-type__name-text1 {
-  position: relative;
-  top: 8px;
-}
-
-.field-item-type__input:checked ~ .field-item-type__checked {
-  display: block;
+.field-item-type__input:checked + .field-item-type__label::after {
+  position: absolute;
+  content: "";
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #63d1bb;
-  position: relative;
-  top: 10px;
-  left: 10px;
+  left: -51px;
+  top: 2px;
 }

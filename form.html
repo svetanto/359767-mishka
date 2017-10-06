@@ -60,66 +60,26 @@
 
         <fieldset class="field-item-type form__group">
           <legend><span class="form__legend">Тип    </span></legend>
-          <div class="field-item-type__wrapper">
-            <label class="field-item-type__label">
-              <input class="field-item-type__input" type="radio" name="item-type" value="interior-accessory" checked>
-              <span class="field-item-type__checked"></span>
-            </label>
-            <span class="field-item-type__name-text1">Аксессуар для интерьера</span>
-          </div>
-          <div class="field-item-type__wrapper">
-            <label class="field-item-type__label">
-              <input class="field-item-type__input" type="radio" name="item-type" value="kids-toy">
-              <span class="field-item-type__checked"></span>
-            </label>
-            <span class="field-item-type__name-text2">Детская игрушка</span>
-          </div>
+          <input class="field-item-type__input" type="radio" name="item-type" id="interior-accessory" value="interior-accessory" checked>
+          <label class="field-item-type__label" for="interior-accessory">Аксессуар для интерьера</label>
+          <input class="field-item-type__input" type="radio" name="item-type" id="kids-toy" value="kids-toy">
+          <label class="field-item-type__label" for="kids-toy">Детская игрушка</label>
         </fieldset>
 
         <fieldset class="field-color form__group">
           <legend class="form__legend">Цвет    </legend>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="white" checked>
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Белый</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="gray" checked>
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Серый</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="tiffany">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">«Тиффани»</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="black">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Чёрный</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="pink">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Розовый</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="orange">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Оранжевый</span>
-          </div>
+          <input class="field-color__input" type="checkbox" id="white" name="white" checked>
+          <label class="field-color__label" for="white">Белый</label>
+          <input class="field-color__input" type="checkbox" id="gray" name="gray" checked>
+          <label class="field-color__label" for="gray">Серый</label>
+          <input class="field-color__input" type="checkbox" id="tiffany" name="tiffany">
+          <label class="field-color__label" for="tiffany">«Тиффани»</label>
+          <input class="field-color__input" type="checkbox" id="black" name="black">
+          <label class="field-color__label" for="black">Чёрный</label>
+          <input class="field-color__input" type="checkbox" id="pink" name="pink">
+          <label class="field-color__label" for="pink">Розовый</label>
+          <input class="field-color__input" type="checkbox" id="orange" name="orange">
+          <label class="field-color__label" for="orange">Оранжевый</label>
         </fieldset>
 
         <fieldset class="field-fio form__group">
