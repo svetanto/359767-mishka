@@ -2,13 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка</title>
     <link href="css/style.css" rel="stylesheet">
     </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header wrapper">
       <div class="logo">
         <a class="logo__link">
           <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
@@ -52,7 +52,7 @@
     <main class="page-main">
 
       <header class="main-header">
-        <h1 class="main-header__title">Милые штуки <br>ручной <br>работы для дома</h1>
+        <h1 class="main-header__title">Милые штуки <br class="main-header__mobile">ручной<br>работы для дома</h1>
       </header>
 
       <div class="popular">
@@ -144,8 +144,10 @@
             </tr>
           </table>
         </div>
-          <div class="contacts__map"></div>
-          <a class="contacts__link button wrapper" href="#">Напишите нам</a>
+        <div class="contacts__map"></div>
+        <div class="contacts__wrapper wrapper">
+          <a class="contacts__link button" href="#">Напишите нам</a>
+        </div>
       </section>
 
     </main>

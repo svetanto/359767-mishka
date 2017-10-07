@@ -1,8 +1,6 @@
 .logo {
-  width: auto;
   height: 80px;
-  border-bottom: 1px solid #ececec;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .logo__link {
@@ -19,4 +17,18 @@
 
 .logo__link--secondary:active {
   opacity: 0.3;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media (min-width: @tablet-width) {
+
+  .logo {
+    position: absolute;
+    width: 86px;
+    height: 90px;
+    margin: 0;
+    border: none;
+  }
+
 }
