@@ -23,7 +23,7 @@
 
 // Планшетная версия -----------------------------------------------------------
 
-@media (min-width: @tablet-width) {
+@media @tablet {
 
   .main-header {
     width: @tablet-width;
@@ -37,7 +37,6 @@
     width: @tablet-width;
     margin: 0 auto;
     .t-heading();
-    text-align: center;
     padding-top: 150px;
   }
 
@@ -46,11 +45,38 @@
   }
 
   .main-header--secondary {
-    height: 230px;
+    height: 225px;
   }
 
   .main-header--secondary .main-header__title {
     padding-top: 93px;
   }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .main-header {
+    width: @desktop-width;
+    margin-top: -120px;
+    background-size: 1250px auto;
+  }
+
+  .main-header__title {
+    width: @desktop-width;
+    margin: 0 auto;
+    .d-heading();
+    text-align: center;
+    padding-top: 150px;
+  }
+
+
+
+
+
+
+
 
 }

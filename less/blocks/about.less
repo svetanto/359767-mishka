@@ -1,0 +1,145 @@
+.about {
+  margin-top: 70px;
+  position: relative;
+}
+
+.about::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  background: url("../img/zigzag.svg") repeat-x;
+  top: -30px;
+}
+
+.about__title {
+  .heading(2);
+  margin-top: 5px;
+  margin-bottom: 22px;
+}
+
+.about__list {
+  .liststyle();
+}
+
+.about__list-item {
+  height: 123px;
+}
+
+.about__icon {
+  width: 55px;
+  height: 55px;
+  background: url("../img/feature-sprite.svg") no-repeat;
+  margin-bottom: 0;
+}
+
+.about__list-item:nth-child(2) .about__icon {
+  background-position: -55px;
+}
+
+.about__list-item:nth-child(3) .about__icon {
+  background-position: -110px;
+}
+
+.about__list-item:nth-child(4) .about__icon {
+  background-position: -165px;
+}
+
+.about__list-item:nth-child(5) .about__icon {
+  background-position: -220px;
+}
+
+.about__list-item:nth-child(6) .about__icon {
+  background-position: -275px;
+}
+
+.about__text {
+  margin-top: 10px;
+  display: block;
+  width: 250px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+
+  .about {
+    margin-top: 117px;
+  }
+
+  .about::before {
+    height: 80px;
+    background-size: 40px auto;
+    top: -70px;
+  }
+
+  .about__title {
+    display: block;
+    .t-heading();
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+
+  .about__text {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 480px;
+  }
+
+  .about__list-item {
+    display: block;
+    width: 200px;
+    height: 155px;
+  }
+
+  .about__text {
+    width: 320px;
+  }
+
+  .about__icon {
+    margin-left: -7px;
+  }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .about__wrapper {
+    width: 700px;
+    padding: 0;
+  }
+
+  .about__title {
+    .d-heading();
+    text-align: left;
+    margin-top: 154px;
+    margin-bottom: 40px;
+  }
+  .about::before {
+    background-size: 50px auto;
+    top: -85px;
+  }
+
+  .about__list {
+    height: 480px;
+    width: 670px;
+    align-items: flex-start;
+  }
+
+  .about__list-item {
+    width: 350px;
+  }
+
+}

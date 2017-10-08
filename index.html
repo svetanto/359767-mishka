@@ -56,49 +56,53 @@
       </header>
 
       <div class="popular">
-        <a class="popular__item" href="#">
-          <span class="popular__text">Предметы интерьера</span>
-          <img class="popular__img" src="img/icon-interior.svg" width="62" height="62" alt="Предметы интерьера">
-        </a>
-        <a class="popular__item" href="#">
-          <span class="popular__text">Детские игрушки</span>
-          <img class="popular__img" src="img/icon-toy.svg" width="62" height="62" alt="Детские игрушки">
-        </a>
+        <div class="popular__wrapper">
+          <a class="popular__item" href="#">
+            <span class="popular__text">Предметы интерьера</span>
+            <img class="popular__img" src="img/icon-interior.svg" width="62" height="62" alt="Предметы интерьера">
+          </a>
+          <a class="popular__item" href="#">
+            <span class="popular__text">Детские игрушки</span>
+            <img class="popular__img" src="img/icon-toy.svg" width="62" height="62" alt="Детские игрушки">
+          </a>
+        </div>
       </div>
 
       <section class="week-product">
+
         <div class="week-product__wrapper wrapper">
           <h2 class="week-product__title">Вязаные корзинки</h2>
           <b class="week-product__caption">Товар недели</b>
-          <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="week-product__table table">
-            <tr>
-              <td class="week-product__cell">Цвет:</td><td class="week-product__cell">«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td class="week-product__cell">Диаметр:</td><td class="week-product__cell">25 см</td>
-            </tr>
-            <tr>
-              <td class="week-product__cell">Высота:</td><td class="week-product__cell">15 см</td>
-            </tr>
-          </table>
-          <img class="week-product__photo" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-          <p class="week-product__price">Цена: 990 руб.</p>
-          <a class="week-product__link button" href="#">Заказать</a>
+          <div class="week-product__textwrapper">
+            <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="week-product__table table">
+              <tr>
+                <td class="week-product__cell">Цвет:</td><td class="week-product__cell">«Тиффани»/серый</td>
+              </tr>
+              <tr>
+                <td class="week-product__cell">Диаметр:</td><td class="week-product__cell">25 см</td>
+              </tr>
+              <tr>
+                <td class="week-product__cell">Высота:</td><td class="week-product__cell">15 см</td>
+              </tr>
+            </table>
+            <img class="week-product__photo" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <p class="week-product__price">Цена: 990 руб.</p>
+            <a class="week-product__link button" href="#">Заказать</a>
+          </div>
         </div>
       </section>
 
       <section class="about">
-        <div class="about__divider divider"></div>
         <div class="about__wrapper wrapper">
           <h2 class="about__title">Коротко о нас:</h2>
           <ul class="about__list">
             <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Экологически <br>чистые материалы</span></li>
             <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Скандинавский стиль <br>по российской цене</span></li>
             <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Увеличивает лайки <br>на фотографиях</span></li>
-            <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Связано вручную с любовью и умилением</span></li>
+            <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Связано вручную с <br>любовью и умилением</span></li>
             <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Поддержка отечественного производителя</span></li>
-            <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Поставляется в подарочной упаковке</span></li>
+            <li class="about__list-item"><div class="about__icon"></div><span class="about__text">Поставляется в <br>подарочной упаковке</span></li>
           </ul>
         </div>
       </section>
@@ -122,27 +126,30 @@
               <cite class="reviews__author">Анастасия Красильникова</cite>
               <a class="reviews__user-ref" href="#">@misssssiskras</a>
             </blockquote>
-            <div class="reviews__nav">
-              <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-              <button class="reviews__next" type="button">Следующий отзыв</button>
-            </div>
+          </div>
+          <div class="reviews__nav-link-wrapper">
+          <div class="reviews__nav">
+            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
           <a class="reviews__link button" href="#">Написать</a>
+          </div>
         </div>
       </section>
 
       <section class="contacts">
-        <div class="contacts__divider divider"></div>
         <div class="contacts__wrapper wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__table table">
-            <tr>
-              <td class="contacts__column contacts__column1">e-mail:</td><td class="contacts__column"><a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-            </tr>
-            <tr>
-              <td class="contacts__column contacts__column1">адрес:</td><td class="contacts__column">г. Санкт-Петербург, <br>ул. Большая <br>Конюшенная, <br>д. 19/8, офис 101</td>
-            </tr>
-          </table>
+          <div class="contacts__text-wrapper">
+            <div class="contacts__block">
+              <span class="contacts__field-name">e-mail:</span>
+              <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </div>
+            <div class="contacts__block">
+              <span class="contacts__field-name">адрес:</span>
+              <span class="contacts__address">г. Санкт-Петербург, <br>ул. Большая <br class="contacts__br">Конюшенная, <br>д. 19/8, офис 101</span>
+            </div>
+          </div>
         </div>
         <div class="contacts__map"></div>
         <div class="contacts__wrapper wrapper">
@@ -154,6 +161,8 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper wrapper">
+
+        <div class="footer-logo"></div>
 
         <div class="social">
           <ul class="social__list">
@@ -169,9 +178,10 @@
           </ul>
         </div>
 
-        <div class="copyright wrapper">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="copyright__text">Разработано</span><div class="copyright__img"></div></a>
-        </div>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">Разработано</span>
+          <div class="copyright__img"></div>
+        </a>
 
       </div>
     </footer>
@@ -194,6 +204,7 @@
         </form>
       </div>
     </div>
+
     <script src="js/main-nav.js"></script>
   </body>
 </html>

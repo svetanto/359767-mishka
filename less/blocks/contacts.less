@@ -1,0 +1,176 @@
+.contacts {
+  margin-top: 90px;
+  position: relative;
+}
+
+.contacts::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  background: url("../img/zigzag.svg") repeat-x;
+  top: -45px;
+}
+
+.contacts__title {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 27px;
+}
+
+.contacts__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0;
+  text-align: top;
+  margin-bottom: 32px;
+}
+
+.contacts__block {
+  display: flex;
+}
+
+.contacts__block:nth-child(1) {
+  margin-bottom: 30px;
+}
+
+.contacts__field-name {
+  width: 78px;
+}
+
+.contacts__mail {
+  border-bottom: 1px solid #62d1ba;
+}
+
+.contacts__map {
+  width: 320px;
+  height: 457px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 38px;
+  background: url("../img/icon-map-pin.svg") no-repeat 138px 144px,
+    url("../img/map-mobile@1x.jpg") no-repeat;
+}
+
+.contacts__link {
+  margin-bottom: 40px;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+
+  .contacts::before {
+    height: 80px;
+    background-size: 40px auto;
+    top: -80px;
+  }
+
+  .contacts__title {
+    position: relative;
+    .t-heading();
+    text-align: left;
+    margin-top: 145px;
+    margin-bottom: 50px;
+  }
+
+  .contacts__title::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 90px;
+    background: url("../img/icon-flag.svg") no-repeat center;
+    left: 611px;
+    top: -17px;
+  }
+
+  .contacts__text-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: @tablet-width - 100px;
+    font-size: 17px;
+  }
+
+  .contacts__field-name {
+    width: 78px;
+  }
+
+  .contacts__block {
+    width: 310px;
+    margin-right: 50px;
+  }
+
+  .contacts__br {
+    display: none;
+  }
+
+  .contacts__address {
+    width: 230px;
+  }
+
+  .contacts__map {
+    width: @tablet-width;
+    background-size: auto, 100%;
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+
+  .contacts__link {
+    width: 230px;
+    margin-bottom: 55px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .contacts::before {
+    top: -160px;
+  }
+
+  .contacts__title {
+    .d-heading();
+    text-align: left;
+    margin-top: 238px;
+    margin-bottom: 50px;
+    margin-left: 170px;
+  }
+
+  .contacts__title::after {
+    left: -115px;
+    top: -14px;
+  }
+
+  .contacts__title::before {
+    position: absolute;
+    content: "";
+    width: 525px;
+    height: 457px;
+    background: url("../img/icon-map-pin.svg") no-repeat 138px 144px,
+      url("../img/map-mobile@1x.jpg") no-repeat;
+    background-size: auto, 100%;
+    left: 353px;
+    top: -70px;
+  }
+
+  .contacts__map {
+    display: none;
+  }
+
+  .contacts__text-wrapper {
+    flex-direction: column;
+    margin-left: 170px;
+  }
+
+  .contacts__link {
+    margin-left: 174px;
+    margin-top: 77px;
+    margin-bottom: 100px;
+  }
+
+}

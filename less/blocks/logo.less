@@ -21,7 +21,11 @@
 
 // Планшетная версия -----------------------------------------------------------
 
-@media (min-width: @tablet-width) {
+@media @tablet {
+
+  .page-header {
+    position: relative;
+  }
 
   .logo {
     position: absolute;
@@ -29,6 +33,16 @@
     height: 90px;
     margin: 0;
     border: none;
+  }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .logo {
+    left: 1250px/2 - 86px/2;
   }
 
 }
