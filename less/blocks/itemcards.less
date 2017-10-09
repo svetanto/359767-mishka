@@ -1,4 +1,29 @@
 .itemcards {
   .liststyle();
   margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+
+  .itemcards {
+    margin-top: 80px;
+  }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .itemcards {
+    width: @desktop-width - 200px;
+    margin-top: 125px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 }

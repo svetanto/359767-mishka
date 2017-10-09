@@ -46,6 +46,18 @@
 
   .main-header--secondary {
     height: 225px;
+    position: relative;
+  }
+
+  .main-header--secondary::after {
+    position: absolute;
+    content: "";
+    width: @tablet-width;
+    height: 40px;
+    left: 0px;
+    bottom: -28px;
+    background: url("../img/zigzag-white.svg") repeat-x;
+    background-size: 45px auto;
   }
 
   .main-header--secondary .main-header__title {
@@ -72,11 +84,17 @@
     padding-top: 150px;
   }
 
+  .main-header--secondary {
+    height: 255px;
+  }
 
-
-
-
-
-
+  .main-header--secondary::after {
+    width: @desktop-width;
+    height: 40px;
+    left: 0px;
+    bottom: -20px;
+    background: url("../img/zigzag-white.svg") repeat-x;
+    background-size: 57px auto;
+  }
 
 }
