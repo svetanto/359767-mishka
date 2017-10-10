@@ -28,3 +28,52 @@
 .field-mail__input:focus ~ .field-mail__mail-icon {
   background-position-y: -21px;
 }
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+
+  .field-mail {
+    margin-top: 17px;
+    margin-bottom: 80px;
+  }
+
+  .field-mail__input {
+    width: 500px;
+    font-size: 19px;
+    padding-bottom: 15px;
+    margin: 0;
+    margin-left: 165px;
+    padding-left: 20px;
+    background-color: transparent;
+  }
+
+  .field-mail__mail-icon {
+    left: 613px;
+    top: 22px;
+  }
+
+  .field-mail__legend {
+    top: 35px;
+  }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .field-mail__input {
+    width: 700px;
+    margin-left: 172px;
+  }
+
+  .field-mail__mail-icon {
+    left: 838px;
+  }
+
+  .field-mail__legend {
+    left: 60px;
+  }
+
+}

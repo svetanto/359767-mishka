@@ -19,7 +19,7 @@
   width: 160px;
 }
 
-.field-color__label::before {
+  .field-color__label::before {
   position: absolute;
   content: "";
   width: 40px;
@@ -37,4 +37,104 @@
   background: url("../img/icon-tick.svg") no-repeat center;
   left: -62px;
   top: -9px;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+
+  .field-color {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 67px;
+  }
+
+  .field-color::before {
+    position: absolute;
+    content: "";
+    width: @tablet-width;
+    height: 304px;
+    background-color: #f1f1f1;
+    left: -50px;
+    top: -50px;
+  }
+
+  .field-color__label {
+    font-size: 19px;
+    margin: 0;
+    width: 160px;
+  }
+
+  .field-color__label::before {
+    width: 52px;
+    height: 52px;
+    left: -80px;
+    top: -16px;
+  }
+
+  .field-color__input:checked + .field-color__label::after {
+    width: 52px;
+    height: 52px;
+    left: -80px;
+    top: -17px;
+    background-size: 60% auto;
+  }
+
+  .field-color__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 148px;
+    margin-top: 15px;
+  }
+
+  .field-color__item {
+    width: 245px;
+    height: 25px;
+    padding-left: 100px;
+    margin-bottom: 50px;
+  }
+
+  .field-color__item:nth-child(2n) {
+    padding-left: 117px;
+  }
+
+  .field-color__legend {
+    top: 25px;
+  }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .field-color::before {
+    width: @desktop-width;
+    height: 228px;
+    left: -100px;
+    top: -50px;
+  }
+
+  .field-color__wrapper {
+    margin-left: 155px;
+    margin-top: 15px;
+  }
+
+  .field-color__item {
+    width: 263px;
+    height: 25px;
+    padding-left: 100px;
+    margin-bottom: 50px;
+  }
+
+  .field-color__item:nth-child(2n) {
+    padding-left: 100px;
+  }
+
+  .field-color__legend {
+    left: 60px;
+  }
+
 }

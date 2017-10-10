@@ -3,6 +3,7 @@
   display: block;
   margin-top: -15px;
   padding-top: 27px;
+  position: relative;
 }
 
 .field-fio__input {
@@ -141,4 +142,81 @@
   color: #aaaaaa;
   opacity: 0;
   transition: opacity 1s ease;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+
+  .field-fio {
+    margin-bottom: 56px;
+  }
+
+  .field-fio::before {
+    position: absolute;
+    content: "";
+    width: @tablet-width;
+    height: 228px;
+    background-color: #f1f1f1;
+    left: -50px;
+    top: 265px;
+  }
+
+  .field-fio__input,
+  .field-fio__label {
+    font-size: 19px;
+    display: inline-block;
+  }
+
+  .field-fio__wrapper {
+    margin-left: 165px;
+  }
+
+  .field-fio__input {
+    width: 375px;
+    margin-left: 20px;
+    padding-bottom: 12px;
+    margin-bottom: 37px;
+    padding-left: 20px;
+  }
+
+  .field-fio__input:nth-of-type(1) {
+    width: 427px;
+  }
+
+  .field-fio__legend {
+    top: 35px;
+  }
+
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+
+  .field-fio::before {
+    width: @desktop-width;
+    left: -100px;
+    top: 265px;
+  }
+
+  .field-fio__wrapper {
+    margin-left: 175px;
+    width: 700px;
+  }
+
+  .field-fio__input {
+    width: 573px;
+    margin-left: 20px;
+    padding-bottom: 13px;
+  }
+
+  .field-fio__input:nth-of-type(1) {
+    width: 625px;
+  }
+
+  .field-fio__legend {
+    top: 36px;
+    left: 58px;
+  }
 }
