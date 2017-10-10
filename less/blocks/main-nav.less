@@ -1,5 +1,4 @@
 @media (max-width: (@tablet-width - 1)) {
-
   .main-nav__wrapper {
     background-color: #ffffff;
     width: 320px;
@@ -25,7 +24,7 @@
   }
 
   .main-nav__toggle--open {
-      background-image: url("../img/icon-menu-close.svg");
+    background-image: url("../img/icon-menu-close.svg");
   }
 
   .main-nav {
@@ -39,6 +38,7 @@
     position: absolute;
     display: none;
   }
+
   .main-nav--open {
     display: block;
   }
@@ -76,12 +76,11 @@
 
   .nomobile {
     display: none;
-}
+  }
 }
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
-
   .main-nav__wrapper {
     margin: 0 auto;
     z-index: 10;
@@ -108,13 +107,11 @@
     .textstyle(15px, 24px, bold);
   }
 
-  .user-list__cart {
-    font-size: 17px;
-  }
-
   .user-list__delivery {
     font-weight: normal;
     color: #444444;
+    display: block;
+    text-align: right;
   }
 
   .site-list {
@@ -139,6 +136,7 @@
   }
 
   .user-list__cart {
+    font-size: 17px;
     position: relative;
     display: block;
     height: 75px;
@@ -160,7 +158,6 @@
   }
 
   .user-list__item:nth-child(2) {
-    // outline: black solid 1px;
     padding-top: 32px;
     width: 263px;
   }
@@ -168,19 +165,14 @@
   .user-list__item:nth-child(3) {
     width: 250px;
   }
-
-  .user-list__delivery {
-    display: block;
-    text-align: right;
-  }
 }
 
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
-
   .notablet {
     display: block;
+    font-size: 15px;
   }
 
   .site-list {
@@ -191,11 +183,6 @@
 
   .user-list {
     margin: 0;
-  }
-
-  .notablet {
-    display: block;
-    font-size: 15px;
   }
 
   .site-list__item {
@@ -226,5 +213,4 @@
     margin: 0;
     height: 90px;
   }
-
 }

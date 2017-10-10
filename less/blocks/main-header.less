@@ -24,7 +24,6 @@
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
-
   .main-header {
     width: @tablet-width;
     height: 750px;
@@ -54,7 +53,7 @@
     content: "";
     width: @tablet-width;
     height: 40px;
-    left: 0px;
+    left: 0;
     bottom: -28px;
     background: url("../img/zigzag-white.svg") repeat-x;
     background-size: 45px auto;
@@ -63,13 +62,11 @@
   .main-header--secondary .main-header__title {
     padding-top: 93px;
   }
-
 }
 
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
-
   .main-header {
     width: @desktop-width;
     margin-top: -120px;
@@ -91,10 +88,9 @@
   .main-header--secondary::after {
     width: @desktop-width;
     height: 40px;
-    left: 0px;
+    left: 0;
     bottom: -20px;
     background: url("../img/zigzag-white.svg") repeat-x;
     background-size: 57px auto;
   }
-
 }
