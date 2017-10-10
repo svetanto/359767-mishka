@@ -1,0 +1,53 @@
+// Доп
+.field-dop__textarea {
+  margin-top: 4px;
+  width: 260px;
+  height: 142px;
+  border: 2px solid #000000;
+  font: inherit;
+  .textstyle(17px, 18px, normal);
+  padding: 12px;
+}
+
+.field-dop__textarea:focus,
+.field-dop__textarea:hover {
+  outline: none;
+  border-color: #63d1bb;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .field-dop {
+    margin-bottom: 46px;
+  }
+
+  .field-dop__textarea {
+    margin-top: 0;
+    margin-left: 165px;
+    width: 500px;
+    font-size: 19px;
+  }
+
+  .field-dop__legend {
+    top: 45px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .field-dop {
+    margin-bottom: 40px;
+  }
+
+  .field-dop__textarea {
+    margin-left: 173px;
+    width: 700px;
+    font-size: 19px;
+  }
+
+  .field-dop__legend {
+    left: 60px;
+  }
+}

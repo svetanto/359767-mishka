@@ -1,0 +1,50 @@
+.copyright {
+  display: flex;
+  width: 180px;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 19px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.copyright__text {
+  display: block;
+  width: 130px;
+  height: 30px;
+}
+
+.copyright__img {
+  width: 27px;
+  height: 34px;
+  background: url("../img/logo-htmlacademy.svg") no-repeat;
+  opacity: 0.7;
+}
+
+.copyright__link:hover .copyright__img {
+  opacity: 1;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .copyright {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .copyright {
+    margin-left: 212px;
+  }
+}

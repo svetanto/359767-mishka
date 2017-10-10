@@ -1,0 +1,140 @@
+.reviews__wrapper {
+  margin-top: 35px;
+}
+
+.reviews__item:not(:nth-child(1)) {
+  display: none;
+}
+
+.reviews__title {
+  .heading(2);
+}
+
+.reviews__item {
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__text {
+  margin-top: 25px;
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.reviews__author {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.reviews__user-ref {
+  display: block;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 33px;
+  font-size: 17px;
+  color: #000000;
+}
+
+.reviews__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 39px;
+}
+
+.reviews__prev,
+.reviews__next {
+  font-size: 0;
+  width: 130px;
+  height: 52px;
+  border: 1px solid #ececec;
+  background-color: #ffffff;
+}
+
+.reviews__prev {
+  border-right: none;
+  background: url("../img/icon-left-arrow.svg") center no-repeat;
+}
+
+.reviews__next {
+  background: url("../img/icon-right-arrow.svg") center no-repeat;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .reviews__wrapper {
+    position: relative;
+    margin-top: 20px;
+    height: 457px;
+    background: url("../img/review@1x.jpg") left no-repeat;
+  }
+
+  .reviews__title {
+    .t-heading();
+    text-align: left;
+    padding-top: 77px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+    margin-top: 50px;
+    margin-bottom: 55px;
+  }
+
+  .reviews__author {
+    font-size: 18px;
+  }
+
+  .reviews__nav-link-wrapper {
+    position: absolute;
+    display: flex;
+    width: 176px;
+    height: 340px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    top: 80px;
+    left: 542px;
+  }
+
+  .reviews__link {
+    width: 176px;
+  }
+
+  .reviews__prev,
+  .reviews__next {
+    cursor: pointer;
+    border: none;
+  }
+
+  .reviews__nav {
+    margin-bottom: 10px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .reviews__wrapper {
+    width: @desktop-width - 200px;
+    padding-left: 174px;
+  }
+
+  .reviews__title {
+    .d-heading();
+    text-align: left;
+    padding-top: 77px;
+  }
+
+  .reviews__text {
+    margin-bottom: 36px;
+  }
+
+  .reviews__nav-link-wrapper {
+    width: 176px;
+    height: 290px;
+    top: 85px;
+    left: 874px;
+  }
+}

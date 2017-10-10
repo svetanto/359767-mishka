@@ -1,0 +1,110 @@
+.popular {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.popular__item {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 103px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  padding-left: 28px;
+}
+
+.popular__text {
+  display: block;
+  width: 90px;
+  margin-top: 25px;
+}
+
+.popular a:first-child {
+  background-color: #63d1bb;
+}
+
+.popular a:last-child {
+  background-color: #56c3b2;
+}
+
+.popular__img {
+  margin-right: 25px;
+  margin-top: 23px;
+  opacity: 0.5;
+}
+
+.popular__item:hover .popular__img {
+  opacity: 1;
+}
+
+.popular__item:active .popular__img {
+  opacity: 0.3;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .popular {
+    width: @tablet-width;
+    margin-top: -125px;
+  }
+
+  .popular__wrapper {
+    position: relative;
+    width: @tablet-width;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+  }
+
+  .popular__item {
+    width: (@tablet-width - 100px)/2;
+    height: 120px;
+    padding-left: 37px;
+    padding-top: 4px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .popular__wrapper::after {
+    position: absolute;
+    content: "";
+    width: @tablet-width;
+    height: 40px;
+    left: 0;
+    bottom: -28px;
+    background: url("../img/zigzag-white.svg") repeat-x;
+    background-size: 45px auto;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .popular {
+    width: @desktop-width;
+  }
+
+  .popular__wrapper {
+    width: @desktop-width;
+    padding: 0 100px;
+  }
+
+  .popular__item {
+    width: (@desktop-width - 200px)/2;
+  }
+
+  .popular__wrapper::after {
+    position: absolute;
+    content: "";
+    width: @desktop-width;
+    height: 40px;
+    left: 0;
+    bottom: -25px;
+    background: url("../img/zigzag-white.svg") repeat-x;
+    background-size: 57px auto;
+  }
+}

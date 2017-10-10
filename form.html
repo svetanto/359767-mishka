@@ -2,20 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка — Вязание на заказ</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header wrapper">
       <div class="logo">
-        <a href="index.html" class="logo__link logo__link--secondary">
+        <a class="logo__link logo__link--secondary" href="index.html">
           <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
         </a>
       </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-nav__toggle main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
 
           <ul class="main-nav__list site-list">
@@ -23,7 +23,7 @@
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item nomobile notablet">
               <a class="site-list__link" href="#">Новые поступления</a>
@@ -59,99 +59,75 @@
         <p class="form__offer">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
         <fieldset class="field-item-type form__group">
-          <legend><span class="form__legend">Тип    </span></legend>
-          <div class="field-item-type__wrapper">
-            <label class="field-item-type__label">
-              <input class="field-item-type__input" type="radio" name="item-type" value="interior-accessory" checked>
-              <span class="field-item-type__checked"></span>
-            </label>
-            <span class="field-item-type__name-text1">Аксессуар для интерьера</span>
-          </div>
-          <div class="field-item-type__wrapper">
-            <label class="field-item-type__label">
-              <input class="field-item-type__input" type="radio" name="item-type" value="kids-toy">
-              <span class="field-item-type__checked"></span>
-            </label>
-            <span class="field-item-type__name-text2">Детская игрушка</span>
-          </div>
+          <legend><span class="field-item-type__legend form__legend">Тип    </span></legend>
+          <input class="field-item-type__input" type="radio" name="item-type" id="interior-accessory" value="interior-accessory" checked>
+          <label class="field-item-type__label" for="interior-accessory">Аксессуар для интерьера</label>
+          <input class="field-item-type__input" type="radio" name="item-type" id="kids-toy" value="kids-toy">
+          <label class="field-item-type__label" for="kids-toy">Детская игрушка</label>
         </fieldset>
 
         <fieldset class="field-color form__group">
-          <legend class="form__legend">Цвет    </legend>
+          <legend class="field-color__legend form__legend">Цвет    </legend>
           <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="white" checked>
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Белый</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="gray" checked>
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Серый</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="tiffany">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">«Тиффани»</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="black">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Чёрный</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="pink">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Розовый</span>
-          </div>
-          <div class="field-color__wrapper">
-            <label class="field-color__label">
-              <input class="field-color__input" type="checkbox" name="orange">
-              <span class="field-color__checked"></span>
-            </label>
-            <span class="field-color__name-text">Оранжевый</span>
+            <div class="field-color__item">
+              <input class="field-color__input" type="checkbox" id="white" name="white" checked>
+              <label class="field-color__label" for="white">Белый</label>
+            </div>
+            <div class="field-color__item">
+              <input class="field-color__input" type="checkbox" id="gray" name="gray" checked>
+              <label class="field-color__label" for="gray">Серый</label>
+            </div>
+            <div class="field-color__item">
+              <input class="field-color__input" type="checkbox" id="tiffany" name="tiffany">
+              <label class="field-color__label" for="tiffany">«Тиффани»</label>
+            </div>
+            <div class="field-color__item">
+              <input class="field-color__input" type="checkbox" id="black" name="black">
+              <label class="field-color__label" for="black">Чёрный</label>
+            </div>
+            <div class="field-color__item">
+              <input class="field-color__input" type="checkbox" id="pink" name="pink">
+              <label class="field-color__label" for="pink">Розовый</label>
+            </div>
+            <div class="field-color__item">
+              <input class="field-color__input" type="checkbox" id="orange" name="orange">
+              <label class="field-color__label" for="orange">Оранжевый</label>
+            </div>
           </div>
         </fieldset>
 
         <fieldset class="field-fio form__group">
-          <legend class="form__legend">Фио    </legend>
-          <label class="field-fio__label" for="name">Имя:</label>
-          <input class="field-fio__input form__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-          <label class="field-fio__label" for="surname">Фамилия:</label>
-          <input class="field-fio__input form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
-          <label class="field-fio__label" for="patronymic">Отчество:</label>
-          <input class="field-fio__input form__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          <legend class="field-fio__legend form__legend">Фио    </legend>
+          <div class="field-fio__wrapper">
+            <label class="field-fio__label" for="name">Имя:</label>
+            <input class="field-fio__input form__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+            <label class="field-fio__label" for="surname">Фамилия:</label>
+            <input class="field-fio__input form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+            <label class="field-fio__label" for="patronymic">Отчество:</label>
+            <input class="field-fio__input form__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          </div>
         </fieldset>
 
         <fieldset class="field-tel form__group">
-          <legend class="form__legend">Тел    </legend>
+          <legend class="field-tel__legend form__legend">Тел    </legend>
           <input class="field-tel__input form__input" type="tel" name="tel" pattern="\+[0-9]{1} \([0-9]{3}\) [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 (XXX) XXX XX XX*" required>
           <div class="field-tel__tel-icon"></div>
         </fieldset>
 
         <fieldset class="field-mail form__group">
-          <legend class="form__legend">e-mail    </legend>
+          <legend class="field-mail__legend form__legend">e-mail    </legend>
           <input class="field-mail__input form__input" type="email" name="email" placeholder="Ваш Email*" required>
           <div class="field-mail__mail-icon"></div>
         </fieldset>
 
         <fieldset class="field-dop form__group">
-          <legend class="form__legend">доп    </legend>
+          <legend class="field-dop__legend form__legend">доп    </legend>
           <textarea class="field-dop__textarea" name="add-info" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-
-        <p class="form__hint">* Поля обязательны для заполнения</p>
-
-        <button class="form__button button" type="submit">Отправить заказ</button>
+        <div class="form__hint-button">
+          <p class="form__hint">* Поля обязательны для заполнения</p>
+          <button class="form__button button" type="submit">Отправить заказ</button>
+        </div>
 
       </form>
 
@@ -159,6 +135,8 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper wrapper">
+
+        <div class="footer-logo"></div>
 
         <div class="social">
           <ul class="social__list">
@@ -174,12 +152,14 @@
           </ul>
         </div>
 
-        <div class="copyright wrapper">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="copyright__text">Разработано</span><div class="copyright__img"></div></a>
-        </div>
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="copyright__text">Разработано</span>
+          <div class="copyright__img"></div>
+        </a>
 
       </div>
     </footer>
 
+    <script src="js/main-nav.js"></script>
   </body>
 </html>

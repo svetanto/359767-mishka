@@ -1,0 +1,219 @@
+// ФИО
+.field-fio {
+  display: block;
+  margin-top: -15px;
+  padding-top: 27px;
+  position: relative;
+}
+
+.field-fio__input {
+  width: 260px;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #000000;
+  .textstyle(17px, 18px, normal);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.field-fio__input:focus {
+  outline: none;
+  border-color: #63d1bb;
+}
+
+.field-fio__input:hover {
+  border-color: #63d1bb;
+}
+
+.field-fio__label {
+  display: block;
+  margin-bottom: 16px;
+  .textstyle();
+}
+
+// Танцы с плейсхолдером ------------------------------------------
+.form__input:hover::-webkit-input-placeholder {
+  border-color: #63d1bb;
+}
+
+.form__input:hover::-moz-placeholder {
+  border-color: #63d1bb;
+}
+
+.form__input:hover:-moz-placeholder {
+  border-color: #63d1bb;
+}
+
+.form__input:hover:-ms-input-placeholder {
+  border-color: #63d1bb;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+
+.form__input::-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+/* Firefox 19+ */
+.form__input:-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+/* Firefox 18- */
+.form__input:-ms-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+
+.form__input:focus::-webkit-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.form__input:focus::-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.form__input:focus:-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.form__input:focus:-ms-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.field-dop__textarea::-webkit-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+
+.field-dop__textarea::-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+/* Firefox 19+ */
+.field-dop__textarea:-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+/* Firefox 18- */
+.field-dop__textarea:-ms-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+}
+
+.field-dop__textarea:focus::-webkit-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.field-dop__textarea:focus::-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.field-dop__textarea:focus:-moz-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.field-dop__textarea:focus:-ms-input-placeholder {
+  color: #aaaaaa;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .field-fio {
+    margin-bottom: 56px;
+  }
+
+  .field-fio::before {
+    position: absolute;
+    content: "";
+    width: @tablet-width;
+    height: 228px;
+    background-color: #f1f1f1;
+    left: -50px;
+    top: 265px;
+  }
+
+  .field-fio__input,
+  .field-fio__label {
+    font-size: 19px;
+    display: inline-block;
+  }
+
+  .field-fio__wrapper {
+    margin-left: 165px;
+  }
+
+  .field-fio__input {
+    width: 375px;
+    margin-left: 20px;
+    padding-bottom: 12px;
+    margin-bottom: 37px;
+    padding-left: 20px;
+  }
+
+  .field-fio__input:nth-of-type(1) {
+    width: 427px;
+  }
+
+  .field-fio__legend {
+    top: 35px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .field-fio::before {
+    width: @desktop-width;
+    left: -100px;
+    top: 265px;
+  }
+
+  .field-fio__wrapper {
+    margin-left: 175px;
+    width: 700px;
+  }
+
+  .field-fio__input {
+    width: 573px;
+    margin-left: 20px;
+    padding-bottom: 13px;
+  }
+
+  .field-fio__input:nth-of-type(1) {
+    width: 625px;
+  }
+
+  .field-fio__legend {
+    top: 36px;
+    left: 58px;
+  }
+}

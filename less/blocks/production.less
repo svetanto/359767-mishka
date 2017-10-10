@@ -1,0 +1,159 @@
+.production {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ededed;
+  margin-bottom: 59px;
+}
+
+.production__icon-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 195px;
+  margin: 25px auto;
+}
+
+.production__icon {
+  width: 32px;
+  height: 22px;
+  background: url("../img/icon-video.svg") no-repeat;
+}
+
+.production__title {
+  display: block;
+  width: 130px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.production__video {
+  width: 258px;
+  height: 150px;
+  background: url("../img/icon-play.svg") no-repeat,
+    url("../img/video-mobile@1x.jpg") no-repeat;
+  background-position: center;
+}
+
+.production__annotation {
+  display: block;
+  width: 192px;
+  margin: 0 auto;
+  margin-top: 27px;
+  margin-bottom: 24px;
+}
+
+.production__link {
+  width: 192px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .production {
+    height: 745px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 62px;
+  }
+
+  .production__icon-title {
+    order: 1;
+    width: 584px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    margin-left: 41px;
+    margin-top: 20px;
+  }
+
+  .production__title {
+    font-size: 20px;
+    width: 300px;
+    margin-left: 32px;
+  }
+
+  .production__annotation-link {
+    order: 2;
+    margin: 0 auto;
+    width: 584px;
+    margin-top: 20px;
+  }
+
+  .production__video {
+    width: @tablet-width - 102px;
+    height: 455px;
+    background-size: auto auto, 100% 100%;
+    margin-bottom: 20px;
+  }
+
+  .production__annotation {
+    display: block;
+    width: 584px;
+    margin-top: 14px;
+    margin-bottom: 34px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .production__link {
+    width: 584px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .production {
+    height: 455px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 105px;
+    margin-top: 55px;
+  }
+
+  .production__video {
+    width: 682px;
+    margin: 0;
+  }
+
+  .production__icon-title {
+    width: 230px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    margin-left: 24px;
+    margin-top: 48px;
+  }
+
+  .production__title {
+    width: 230px;
+    margin: 0;
+    margin-top: 27px;
+    margin-bottom: 34px;
+  }
+
+  .production__annotation-link {
+    margin: 0;
+    width: 230px;
+    margin-left: 24px;
+  }
+
+  .production__annotation {
+    width: 230px;
+    margin: 0;
+    // margin-top: 14px;
+    // margin-bottom: 34px;
+  }
+
+  .production__link {
+    margin: 0;
+    margin-top: 45px;
+    width: 230px;
+  }
+}
