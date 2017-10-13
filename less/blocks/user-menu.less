@@ -1,0 +1,148 @@
+.user-menu {
+  background-color: #ffffff;
+  width: 320px;
+  z-index: 10;
+  .liststyle();
+  .textstyle();
+}
+
+.user-menu--closed {
+  display: none;
+}
+
+.user-menu--open {
+  // position: absolute;
+  top: 238px;
+  display: block;
+}
+
+.user-menu__item {
+  display: block;
+  position: relative;
+  height: 79px;
+  border-top: 1px solid #ececec;
+  padding-top: 27px;
+  padding-left: 75px;
+}
+
+.user-menu__search::before,
+.user-menu__cart::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 19px;
+  background: url("../img/icon-search.svg") no-repeat center;
+  opacity: 0.2;
+  left: 30px;
+}
+
+.user-menu__cart::before {
+  background: url("../img/icon-cart.svg") no-repeat center;
+}
+
+.user-menu__item--nomobile {
+  display: none;
+}
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .user-menu {
+    width: 348px;
+    .textstyle(17px, 24px, bold);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+    order: 2;
+  }
+
+  .user-menu__item--nomobile {
+    display: block;
+  }
+
+  .user-menu__item {
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    border: none;
+  }
+
+  .user-menu__item--search {
+    width: 84px;
+    height: 90px;
+    font-size: 0;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .user-menu__search::before {
+    top: 34px;
+  }
+
+  .user-menu__item--cart {
+    width: 220px;
+    height: 90px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .user-menu__cart::before {
+    top: 34px;
+    left: -13px;
+  }
+
+  .user-menu__item--delivery {
+    width: 300px;
+    height: 35px;
+    margin-left: auto;
+    text-align: right;
+    font-size: 15px;
+    font-weight: normal;
+    color: #444444;
+    padding-top: 15px;
+  }
+}
+
+// Десктопная версия -----------------------------------------------------------
+
+@media @desktop {
+  .user-menu {
+    width: 420px;
+    order: 3;
+    align-items: flex-start;
+  }
+
+  .user-menu__item--nomobile {
+    display: block;
+  }
+
+  .user-menu__item {
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    border: none;
+  }
+
+  .user-menu__item--search {
+    margin-left: 70px;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .user-menu__item--cart {
+    width: 200px;
+    height: 90px;
+    text-align: right;
+  }
+
+  .user-menu__cart::before {
+    top: 34px;
+    left: -35px;
+  }
+
+  .user-menu__item--delivery {
+    height: 35px;
+    margin-left: auto;
+    padding-top: 16px;
+  }
+}
