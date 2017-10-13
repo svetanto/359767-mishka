@@ -1,33 +1,31 @@
 .popular {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
   margin-bottom: 27px;
 }
 
+.popular__item-wrapper:first-child {
+  background-color: #63d1bb;
+}
+
+.popular__item-wrapper:last-child {
+  background-color: #56c3b2;
+}
+
 .popular__item {
+  width: 320px;
+  height: 103px;
+  margin: 0 auto;
+  padding-left: 29px;
   display: flex;
   justify-content: space-between;
-  width: auto;
-  height: 103px;
   color: #ffffff;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
-  padding-left: 28px;
+  .textstyle(19px, 24px, bold);
 }
 
 .popular__text {
   display: block;
   width: 90px;
   margin-top: 25px;
-}
-
-.popular a:first-child {
-  background-color: #63d1bb;
-}
-
-.popular a:last-child {
-  background-color: #56c3b2;
 }
 
 .popular__img {
@@ -48,20 +46,19 @@
 
 @media @tablet {
   .popular {
-    width: @tablet-width;
-    margin-top: -125px;
+    position: relative;
   }
 
   .popular__wrapper {
-    position: relative;
-    width: @tablet-width;
+    width: @tablet-width - 100px;
     margin: 0 auto;
-    padding: 0 50px;
+    margin-top: -125px;
     display: flex;
   }
 
   .popular__item {
     width: (@tablet-width - 100px)/2;
+    display: flex;
     height: 120px;
     padding-left: 37px;
     padding-top: 4px;
@@ -69,13 +66,12 @@
     line-height: 30px;
   }
 
-  .popular__wrapper::after {
+  .popular::after {
     position: absolute;
     content: "";
-    width: @tablet-width;
+    width: 100%;
     height: 40px;
-    left: 0;
-    bottom: -28px;
+    bottom: -27px;
     background: url("../img/zigzag-white.svg") repeat-x;
     background-size: 45px auto;
   }
@@ -84,27 +80,16 @@
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
-  .popular {
-    width: @desktop-width;
-  }
-
   .popular__wrapper {
-    width: @desktop-width;
-    padding: 0 100px;
+    width: @desktop-width - 200px;
   }
 
   .popular__item {
     width: (@desktop-width - 200px)/2;
   }
 
-  .popular__wrapper::after {
-    position: absolute;
-    content: "";
-    width: @desktop-width;
-    height: 40px;
-    left: 0;
+  .popular::after {
     bottom: -25px;
-    background: url("../img/zigzag-white.svg") repeat-x;
     background-size: 57px auto;
   }
 }
