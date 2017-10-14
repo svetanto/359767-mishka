@@ -42,22 +42,16 @@
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
-  .field-color {
-    position: relative;
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 67px;
+  .field__wrapper {
+    width: auto;
+    background-color: #f1f1f1;
+    padding-top: 40px;
   }
 
-  .field-color::before {
-    position: absolute;
-    content: "";
-    width: @tablet-width;
-    height: 304px;
-    background-color: #f1f1f1;
-    left: -50px;
-    top: -50px;
+  .field-color {
+    display: block;
+    padding: 0;
+    margin-bottom: 50px;
   }
 
   .field-color__label {
@@ -86,6 +80,7 @@
     flex-wrap: wrap;
     margin-left: 148px;
     margin-top: 15px;
+    margin-bottom: 12px;
   }
 
   .field-color__item {
@@ -107,11 +102,8 @@
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
-  .field-color::before {
-    width: @desktop-width;
-    height: 228px;
-    left: -100px;
-    top: -50px;
+  .field-color {
+    padding-left: 53px;
   }
 
   .field-color__wrapper {
