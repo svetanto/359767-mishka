@@ -46,13 +46,11 @@
 }
 
 .contacts__map {
-  width: 320px;
+  width: auto;
+  min-width: 320px;
   height: 457px;
-  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 38px;
-  background: url("../img/icon-map-pin.svg") no-repeat 138px 144px,
-    url("../img/map-mobile@1x.jpg") no-repeat;
 }
 
 .contacts__link {
@@ -112,8 +110,8 @@
   }
 
   .contacts__map {
-    width: @tablet-width;
-    background-size: auto, 100%;
+    width: auto;
+    min-width: @tablet-width;
     margin-top: 55px;
     margin-bottom: 55px;
   }
@@ -144,20 +142,19 @@
     top: -14px;
   }
 
-  .contacts__title::before {
-    position: absolute;
-    content: "";
-    width: 525px;
-    height: 457px;
-    background: url("../img/icon-map-pin.svg") no-repeat 138px 144px,
-      url("../img/map-mobile@1x.jpg") no-repeat;
-    background-size: auto, 100%;
-    left: 353px;
-    top: -70px;
+  .contacts__map-wrapper {
+    width: @desktop-width;
+    margin: 0 auto;
+    position: relative;
   }
 
   .contacts__map {
-    display: none;
+    position: absolute;
+    min-width: 0;
+    width: 525px;
+    height: 457px;
+    left: 623px;
+    top: -124px;
   }
 
   .contacts__text-wrapper {

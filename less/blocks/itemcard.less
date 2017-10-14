@@ -1,8 +1,15 @@
 .itemcard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0;
   border: 1px solid #ededed;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+}
+
+.itemcard__photo {
+  margin-bottom: 6px;
 }
 
 .itemcard__name-spec {
@@ -57,8 +64,7 @@
 
 @media @tablet {
   .itemcard {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     height: 334px;
     margin-bottom: 52px;
   }

@@ -8,45 +8,47 @@
     </head>
   <body>
 
-    <header class="page-header wrapper">
-      <div class="logo">
-        <a class="logo__link">
-          <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-        </a>
-      </div>
+    <header class="page-header">
+
       <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
 
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item nomobile notablet">
-              <a class="site-list__link" href="#">Новые поступления</a>
-            </li>
-            <li class="site-list__item nomobile notablet">
-              <a class="site-list__link" href="#">Распродажа</a>
-            </li>
-          </ul>
-
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="user-list__item">
-              <a class="user-list__cart" href="#">Корзина: пока пуста</a>
-            </li>
-            <li class="user-list__item nomobile">
-              <a class="user-list__delivery" href="#">Бесплатная доставка по России</a>
-            </li>
-          </ul>
-
+        <div class="logo">
+          <a class="logo__link">
+            <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </a>
         </div>
+
+        <button class="menu-toggle menu-toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
+        <ul class="site-menu">
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-menu__item site-menu__item--nomobile site-menu__item--notablet">
+            <a class="site-menu__link" href="#">Новые поступления</a>
+          </li>
+          <li class="site-menu__item site-menu__item--nomobile site-menu__item--notablet">
+            <a class="site-menu__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+
+        <ul class="user-menu">
+          <li class="user-menu__item user-menu__item--search">
+            <a class="user-menu__search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="user-menu__item user-menu__item--cart">
+            <a class="user-menu__cart" href="#">Корзина: пока пуста</a>
+          </li>
+          <li class="user-menu__item user-menu__item--delivery user-menu__item--nomobile">
+            <a class="user-menu__delivery" href="#">Бесплатная доставка по России</a>
+          </li>
+        </ul>
+
       </nav>
+
     </header>
 
     <main class="page-main">
@@ -57,14 +59,18 @@
 
       <div class="popular">
         <div class="popular__wrapper">
-          <a class="popular__item" href="#">
-            <span class="popular__text">Предметы интерьера</span>
-            <img class="popular__img" src="img/icon-interior.svg" width="62" height="62" alt="Предметы интерьера">
-          </a>
-          <a class="popular__item" href="#">
-            <span class="popular__text">Детские игрушки</span>
-            <img class="popular__img" src="img/icon-toy.svg" width="62" height="62" alt="Детские игрушки">
-          </a>
+          <div class="popular__item-wrapper">
+            <a class="popular__item" href="#">
+              <span class="popular__text">Предметы интерьера</span>
+              <img class="popular__img" src="img/icon-interior.svg" width="62" height="62" alt="Предметы интерьера">
+            </a>
+          </div>
+          <div class="popular__item-wrapper">
+            <a class="popular__item" href="#">
+              <span class="popular__text">Детские игрушки</span>
+              <img class="popular__img" src="img/icon-toy.svg" width="62" height="62" alt="Детские игрушки">
+            </a>
+          </div>
         </div>
       </div>
 
@@ -138,22 +144,26 @@
       </section>
 
       <section class="contacts">
-        <div class="contacts__wrapper wrapper">
-          <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__text-wrapper">
-            <div class="contacts__block">
-              <span class="contacts__field-name">e-mail:</span>
-              <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-            </div>
-            <div class="contacts__block">
-              <span class="contacts__field-name">адрес:</span>
-              <span class="contacts__address">г. Санкт-Петербург, <br>ул. Большая <br class="contacts__br">Конюшенная, <br>д. 19/8, офис 101</span>
+        <div class="contacts__map-wrapper">
+          <div class="contacts__wrapper wrapper">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__text-wrapper">
+              <div class="contacts__block">
+                <span class="contacts__field-name">e-mail:</span>
+                <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </div>
+              <div class="contacts__block">
+                <span class="contacts__field-name">адрес:</span>
+                <span class="contacts__address">г. Санкт-Петербург, <br>ул. Большая <br class="contacts__br">Конюшенная, <br>д. 19/8, офис 101</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="contacts__map"></div>
-        <div class="contacts__wrapper wrapper">
-          <a class="contacts__link button" href="#">Напишите нам</a>
+          <div class="contacts__map">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CBU2NAWV-B" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="contacts__wrapper wrapper">
+            <a class="contacts__link button" href="feedback.html">Напишите нам</a>
+          </div>
         </div>
       </section>
 
@@ -167,13 +177,13 @@
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/mimimishkashop">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/mimimishkashop"><span class="visually-hidden">Мы в Инстаграме</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/mimimishkashop">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/mimimishkashop"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://vk.com/mimimishkashop">Мы в Вконтакте</a>
+              <a class="social__link social__link--twitter" href="https://vk.com/mimimishkashop"><span class="visually-hidden">Мы в Вконтакте</span></a>
             </li>
           </ul>
         </div>

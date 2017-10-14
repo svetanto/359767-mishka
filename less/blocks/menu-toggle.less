@@ -1,0 +1,27 @@
+.menu-toggle.menu-toggle--nojs {
+  display: none;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 80px;
+  margin-left: 10px;
+  background: url("../img/icon-menu-open.svg") no-repeat center;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.menu-toggle--open {
+  background-image: url("../img/icon-menu-close.svg");
+}
+
+// Планшетная версия -----------------------------------------------------------
+
+@media @tablet {
+  .menu-toggle {
+    display: none;
+  }
+}

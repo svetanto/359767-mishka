@@ -1,37 +1,38 @@
 .logo {
+  width: 250px;
   height: 80px;
-  margin: 0 auto;
 }
 
 .logo__link {
   display: block;
-  margin: 0 auto;
   width: 86px;
   height: 35px;
-  padding-top: 22px;
+  margin-left: 115px;
+  margin-top: 22px;
 }
 
-.logo__link--secondary:hover {
+.logo__link[href]:hover {
   opacity: 0.6;
 }
 
-.logo__link--secondary:active {
+.logo__link[href]:active {
   opacity: 0.3;
 }
 
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
-  .page-header {
-    position: relative;
+  .logo {
+    width: 320px;
+    height: 90px;
+    order: 1;
   }
 
-  .logo {
-    position: absolute;
-    width: 86px;
-    height: 90px;
-    margin: 0;
-    border: none;
+  .logo__link {
+    // width: 86px;
+    // height: 35px;
+    margin-left: 0;
+    margin-top: 22px;
   }
 }
 
@@ -39,6 +40,15 @@
 
 @media @desktop {
   .logo {
-    left: 1250px/2 - 86px/2;
+    width: 170px;
+    height: 90px;
+    order: 2;
+  }
+
+  .logo__link {
+    // width: 86px;
+    // height: 35px;
+    margin: auto;
+    margin-top: 22px;
   }
 }
