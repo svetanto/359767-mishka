@@ -55,6 +55,7 @@
 
 .contacts__link {
   margin-bottom: 40px;
+  padding-top: 15px;
 }
 
 // Планшетная версия -----------------------------------------------------------
@@ -125,8 +126,15 @@
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
+  .contacts {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
   .contacts::before {
+    width: @desktop-width - 200px;
     top: -160px;
+    left: 100px;
   }
 
   .contacts__title {

@@ -13,7 +13,11 @@
 
         <div class="logo">
           <a class="logo__link" href="index.html">
-            <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            <picture>
+              <source media="(min-width:1250px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+              <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+            </picture>
           </a>
         </div>
 
@@ -164,6 +168,6 @@
       </div>
     </footer>
 
-    <script src="js/main-nav.js"></script>
+    <script src="js/mishka.js"></script>
   </body>
 </html>

@@ -110,7 +110,21 @@
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
-  .about__wrapper {
+  .about {
+    width: @desktop-width;
+    margin: 0 auto;
+    margin-top: 70px;
+    position: relative;
+  }
+
+  .about::before {
+    width: @desktop-width - 200px;
+    background-size: 50px auto;
+    top: -85px;
+    left: 100px;
+  }
+
+    .about__wrapper {
     width: 700px;
     padding: 0;
   }
@@ -120,11 +134,6 @@
     text-align: left;
     margin-top: 154px;
     margin-bottom: 40px;
-  }
-
-  .about::before {
-    background-size: 50px auto;
-    top: -85px;
   }
 
   .about__list {

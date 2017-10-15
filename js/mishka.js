@@ -15,6 +15,27 @@ menu_toggle_button.addEventListener("click", function(evt) {
   mobile_usermenu.classList.toggle("user-menu--open");
 });
 
+// Открытие и закрытие модального окна
+
+var modal_open_button = document.querySelector(".week-product__link");
+var modal_window = document.querySelector(".cart-popup");
+
+modal_open_button.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  modal_window.classList.add("cart-popup--show");
+});
+
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode == 27) {
+    modal_window.classList.remove("cart-popup--show");
+  }
+});
+
+
+
+
+
+
 
 /*  if (menu_toggle_button.classList.contains("main-nav__toggle--closed")) {
     menu_toggle_button.classList.remove("main-nav__toggle--closed");

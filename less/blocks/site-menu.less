@@ -11,7 +11,7 @@
 }
 
 .site-menu--open {
-  // position: absolute;
+  position: absolute;
   top: 80px;
   display: block;
 }
@@ -23,6 +23,16 @@
   border-top: 1px solid #ececec;
   padding-top: 27px;
   padding-left: 75px;
+}
+
+.site-menu__text {
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
 }
 
 .site-menu__item--nomobile {
