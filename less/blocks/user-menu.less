@@ -7,13 +7,18 @@
 }
 
 .user-menu--closed {
-  display: none;
+  position: absolute;
+  top: 238px;
+  opacity: 0;
+  transition-duration: 0.5s;
 }
 
 .user-menu--open {
   position: absolute;
   top: 238px;
   display: block;
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 
 .user-menu__item {
@@ -57,7 +62,14 @@
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
+  .user-menu--closed {
+    display: none;
+    position: inherit;
+    top: 0;
+  }
+
   .user-menu {
+    opacity: 1;
     width: 348px;
     .textstyle(17px, 24px, bold);
     display: flex;
