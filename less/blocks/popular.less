@@ -25,6 +25,7 @@
   justify-content: space-between;
   color: #ffffff;
   .textstyle(19px, 24px, bold);
+  transition-duration: 0.3s;
 }
 
 .popular__text {
@@ -38,14 +39,28 @@
   margin-top: 23px;
   fill: #149080;
   opacity: 0.5;
+  transition-duration: 0.3s;
 }
 
 .popular__item:hover .popular__img {
   opacity: 1;
+  transition-duration: 0.3s;
 }
 
 .popular__item:active .popular__img {
   opacity: 0.3;
+  transition-duration: 0.3s;
+}
+
+.popular__item:active .popular__text {
+  opacity: 0.3;
+  transition-duration: 0.3s;
+}
+
+.popular__item:hover .popular__item-wrapper {
+  height: 108px;
+  margin-top: -5px;
+  transition-duration: 0.3s;
 }
 
 // Планшетная версия -----------------------------------------------------------
@@ -72,6 +87,13 @@
     height: 120px;
     padding-left: 37px;
     padding-top: 4px;
+    transition-duration: 0.3s;
+  }
+
+  .popular__item:hover {
+    height: 125px;
+    margin-top: -5px;
+    transition-duration: 0.3s;
   }
 
   .popular__text {

@@ -42,3 +42,11 @@ gulp.task("sprite", function () {
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("img"));
 });
+
+var webp = require("gulp-webp");
+
+gulp.task("webp", function () {
+  return gulp.src("img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("img"));
+});
