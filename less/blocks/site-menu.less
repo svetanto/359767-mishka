@@ -7,13 +7,18 @@
 }
 
 .site-menu--closed {
-  display: none;
+  position: absolute;
+  top: 80px;
+  opacity: 0;
+  transition-duration: 0.5s;
 }
 
 .site-menu--open {
-  // position: absolute;
+  position: absolute;
   top: 80px;
   display: block;
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 
 .site-menu__item {
@@ -25,6 +30,17 @@
   padding-left: 75px;
 }
 
+.site-menu__text {
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .site-menu__item--nomobile {
   display: none;
 }
@@ -32,7 +48,14 @@
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
+  .site-menu--closed {
+    display: none;
+    position: inherit;
+    top: 0;
+  }
+
   .site-menu {
+    opacity: 1;
     width: 305px;
     .textstyle(15px, 24px, bold);
     display: flex;

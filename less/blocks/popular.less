@@ -3,15 +3,20 @@
   margin-bottom: 27px;
 }
 
-.popular__item-wrapper:first-child {
+.popular__item {
+  display: block;
+  cursor: pointer;
+}
+
+.popular__item:first-child {
   background-color: #63d1bb;
 }
 
-.popular__item-wrapper:last-child {
+.popular__item:last-child {
   background-color: #56c3b2;
 }
 
-.popular__item {
+.popular__item-wrapper {
   width: 320px;
   height: 103px;
   margin: 0 auto;
@@ -20,6 +25,7 @@
   justify-content: space-between;
   color: #ffffff;
   .textstyle(19px, 24px, bold);
+  transition-duration: 0.3s;
 }
 
 .popular__text {
@@ -31,15 +37,30 @@
 .popular__img {
   margin-right: 25px;
   margin-top: 23px;
+  fill: #149080;
   opacity: 0.5;
+  transition-duration: 0.3s;
 }
 
 .popular__item:hover .popular__img {
   opacity: 1;
+  transition-duration: 0.3s;
 }
 
 .popular__item:active .popular__img {
   opacity: 0.3;
+  transition-duration: 0.3s;
+}
+
+.popular__item:active .popular__text {
+  opacity: 0.3;
+  transition-duration: 0.3s;
+}
+
+.popular__item:hover .popular__item-wrapper {
+  height: 108px;
+  margin-top: -5px;
+  transition-duration: 0.3s;
 }
 
 // Планшетная версия -----------------------------------------------------------
@@ -56,12 +77,26 @@
     display: flex;
   }
 
+  .popular__item-wrapper {
+    padding-left: 0;
+  }
+
   .popular__item {
     width: (@tablet-width - 100px)/2;
     display: flex;
     height: 120px;
     padding-left: 37px;
     padding-top: 4px;
+    transition-duration: 0.3s;
+  }
+
+  .popular__item:hover {
+    height: 125px;
+    margin-top: -5px;
+    transition-duration: 0.3s;
+  }
+
+  .popular__text {
     font-size: 20px;
     line-height: 30px;
   }
@@ -73,7 +108,7 @@
     height: 40px;
     bottom: -27px;
     background: url("../img/zigzag-white.svg") repeat-x;
-    background-size: 45px auto;
+    background-size: 38px auto;
   }
 }
 
@@ -82,6 +117,10 @@
 @media @desktop {
   .popular__wrapper {
     width: @desktop-width - 200px;
+  }
+
+  .popular__item-wrapper {
+    width: 490px;
   }
 
   .popular__item {

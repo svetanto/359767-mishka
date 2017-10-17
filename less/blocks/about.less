@@ -15,7 +15,7 @@
 .about__title {
   .heading(2);
   margin-top: 5px;
-  margin-bottom: 22px;
+  margin-bottom: 33px;
 }
 
 .about__list {
@@ -27,30 +27,18 @@
 }
 
 .about__icon {
+  width: 40px;
+  height: 35px;
+  margin: 0;
+  fill: #63d1bb;
+}
+
+.about__icon-money {
+  width: 47px;
+}
+
+.about__icon-rocket {
   width: 55px;
-  height: 55px;
-  background: url("../img/feature-sprite.svg") no-repeat;
-  margin-bottom: 0;
-}
-
-.about__list-item:nth-child(2) .about__icon {
-  background-position: -55px;
-}
-
-.about__list-item:nth-child(3) .about__icon {
-  background-position: -110px;
-}
-
-.about__list-item:nth-child(4) .about__icon {
-  background-position: -165px;
-}
-
-.about__list-item:nth-child(5) .about__icon {
-  background-position: -220px;
-}
-
-.about__list-item:nth-child(6) .about__icon {
-  background-position: -275px;
 }
 
 .about__text {
@@ -80,7 +68,7 @@
     .t-heading();
     text-align: left;
     margin-top: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .about__text {
@@ -103,13 +91,27 @@
   }
 
   .about__icon {
-    margin-left: -7px;
+    margin-left: 0;
   }
 }
 
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
+  .about {
+    width: @desktop-width;
+    margin: 0 auto;
+    margin-top: 70px;
+    position: relative;
+  }
+
+  .about::before {
+    width: @desktop-width - 200px;
+    background-size: 50px auto;
+    top: -85px;
+    left: 100px;
+  }
+
   .about__wrapper {
     width: 700px;
     padding: 0;
@@ -119,12 +121,7 @@
     .d-heading();
     text-align: left;
     margin-top: 154px;
-    margin-bottom: 40px;
-  }
-
-  .about::before {
-    background-size: 50px auto;
-    top: -85px;
+    margin-bottom: 50px;
   }
 
   .about__list {

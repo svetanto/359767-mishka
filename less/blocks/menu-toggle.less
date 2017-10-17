@@ -3,19 +3,65 @@
 }
 
 .menu-toggle {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  display: block;
-  width: 40px;
-  height: 80px;
-  margin-left: 10px;
-  background: url("../img/icon-menu-open.svg") no-repeat center;
+  margin-left: 13px;
+  margin-top: 24px;
   border: none;
   outline: none;
   background-color: #ffffff;
+  transition-duration: 1s;
 }
 
-.menu-toggle--open {
-  background-image: url("../img/icon-menu-close.svg");
+.menu-toggle__icon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  transition-duration: 0.5s;
+}
+
+.menu-toggle__icon::before,
+.menu-toggle__icon::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.menu-toggle__icon::before {
+  top: -6px;
+  left: 0;
+  transition-duration: 0.5s;
+}
+
+.menu-toggle__icon::after {
+  bottom: -6px;
+  left: 0;
+  transition-duration: 0.5s;
+}
+
+.menu-toggle--open > .menu-toggle__icon {
+  background-color: #ffffff;
+  transition-duration: 0.5s;
+}
+
+.menu-toggle--open > .menu-toggle__icon::before {
+  transform: scaleX(1.35) translateY(6px) rotate(52deg);
+  transition-duration: 0.5s;
+  // animation-name: movedown;
+  // animation-duration: 1s;
+  // animation-fill-mode: forwards;
+}
+
+.menu-toggle--open > .menu-toggle__icon::after {
+  transform: scaleX(1.35) translateY(-6px) rotate(-52deg);
+  transition-duration: 0.5s;
+  // animation-name: moveup;
+  // animation-duration: 1s;
+  // animation-fill-mode: forwards;
 }
 
 // Планшетная версия -----------------------------------------------------------

@@ -32,11 +32,20 @@
 .field-color__input:checked + .field-color__label::after {
   position: absolute;
   content: "";
-  width: 40px;
-  height: 40px;
-  background: url("../img/icon-tick.svg") no-repeat center;
-  left: -62px;
-  top: -9px;
+  width: 22px;
+  height: 16px;
+  background: url("../img/icon-tick.svg") no-repeat;
+  background-size: 100% auto;
+  left: -52px;
+  top: 2px;
+}
+
+.field-color__label:hover::before {
+  border-color: #62d1ba;
+}
+
+.field-color__label:active::before {
+  border-color: #cccccc;
 }
 
 // Планшетная версия -----------------------------------------------------------
@@ -68,11 +77,10 @@
   }
 
   .field-color__input:checked + .field-color__label::after {
-    width: 52px;
-    height: 52px;
-    left: -80px;
-    top: -17px;
-    background-size: 60% auto;
+    width: 33px;
+    height: 22px;
+    left: -70px;
+    top: 0;
   }
 
   .field-color__wrapper {

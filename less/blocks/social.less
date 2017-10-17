@@ -12,30 +12,41 @@
   display: block;
   width: 30px;
   height: 30px;
-  background: url("../img/social-sprite.svg") no-repeat;
   margin-top: 22px;
+}
+
+.social__icon {
+  width: 30px;
+  height: 30px;
+
+  &:hover,
+  &:focus {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icon--instagram {
+  width: 22px;
+  height: 21px;
+  margin-top: 5px;
 }
 
 .social__link--instagram {
   margin-left: 40px;
 }
 
-.social__link--facebook {
-  background-position: -30px 0;
+.social__icon--twitter {
+  width: 24px;
+  height: 21px;
+  margin-top: 5px;
 }
 
 .social__link--twitter {
   margin-right: 40px;
-  background-position: -60px 0;
-}
-
-.social__link:hover,
-.social__link:active {
-  background-position-y: -30px;
-}
-
-.social__link:active {
-  opacity: 0.3;
 }
 
 // Планшетная версия -----------------------------------------------------------
@@ -43,7 +54,7 @@
 @media @tablet {
   .social__list {
     margin-left: 100px;
-    margin-top: 20px;
+    margin-top: 8px;
     border-bottom: none;
   }
 }

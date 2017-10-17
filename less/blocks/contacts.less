@@ -18,6 +18,10 @@
   margin-bottom: 27px;
 }
 
+.contacts__icon {
+  display: none;
+}
+
 .contacts__text-wrapper {
   display: flex;
   flex-direction: column;
@@ -43,6 +47,14 @@
 
 .contacts__mail {
   border-bottom: 1px solid #62d1ba;
+
+  &:hover {
+    color: #62d1ba;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {
@@ -51,10 +63,21 @@
   height: 457px;
   margin-top: 40px;
   margin-bottom: 38px;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 457px;
+}
+
+@media (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 .contacts__link {
   margin-bottom: 40px;
+  padding-top: 15px;
 }
 
 // Планшетная версия -----------------------------------------------------------
@@ -74,14 +97,13 @@
     margin-bottom: 50px;
   }
 
-  .contacts__title::after {
+  .contacts__icon {
+    display: block;
     position: absolute;
-    content: "";
-    width: 60px;
-    height: 90px;
-    background: url("../img/icon-flag.svg") no-repeat center;
-    left: 611px;
-    top: -17px;
+    width: 47px;
+    height: 81px;
+    left: 618px;
+    top: -15px;
   }
 
   .contacts__text-wrapper {
@@ -114,6 +136,13 @@
     min-width: @tablet-width;
     margin-top: 55px;
     margin-bottom: 55px;
+    background-image: url("../img/map-tablet@2x.jpg");
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .contacts__map {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   .contacts__link {
@@ -125,8 +154,15 @@
 // Десктопная версия -----------------------------------------------------------
 
 @media @desktop {
+  .contacts {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
   .contacts::before {
+    width: @desktop-width - 200px;
     top: -160px;
+    left: 100px;
   }
 
   .contacts__title {
@@ -137,9 +173,9 @@
     margin-left: 170px;
   }
 
-  .contacts__title::after {
-    left: -115px;
-    top: -14px;
+  .contacts__icon {
+    left: -107px;
+    top: -10px;
   }
 
   .contacts__map-wrapper {
@@ -155,6 +191,13 @@
     height: 457px;
     left: 623px;
     top: -124px;
+    background-image: url("../img/map-desktop@2x.jpg");
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .contacts__map {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 
   .contacts__text-wrapper {

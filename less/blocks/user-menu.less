@@ -7,13 +7,18 @@
 }
 
 .user-menu--closed {
-  display: none;
+  position: absolute;
+  top: 238px;
+  opacity: 0;
+  transition-duration: 0.5s;
 }
 
 .user-menu--open {
-  // position: absolute;
+  position: absolute;
   top: 238px;
   display: block;
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 
 .user-menu__item {
@@ -23,21 +28,31 @@
   border-top: 1px solid #ececec;
   padding-top: 27px;
   padding-left: 75px;
+
+  &:focus,
+  &:hover {
+    color: #8d8d8d;
+  }
+
+  &:active {
+    color: #cacaca;
+  }
 }
 
-.user-menu__search::before,
-.user-menu__cart::before {
+.user-menu__search-icon,
+.user-menu__cart-icon {
   position: absolute;
-  content: "";
-  width: 21px;
-  height: 19px;
-  background: url("../img/icon-search.svg") no-repeat center;
-  opacity: 0.2;
   left: 30px;
+  fill: #d3d2d2;
 }
 
-.user-menu__cart::before {
-  background: url("../img/icon-cart.svg") no-repeat center;
+.user-menu__item:focus .user-menu__icon,
+.user-menu__item:hover .user-menu__icon {
+  fill: #63d1bb;
+}
+
+.user-menu__item:active .user-menu__icon {
+  fill: #d0f1ea;
 }
 
 .user-menu__item--nomobile {
@@ -46,7 +61,14 @@
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
+  .user-menu--closed {
+    display: none;
+    position: inherit;
+    top: 0;
+  }
+
   .user-menu {
+    opacity: 1;
     width: 348px;
     .textstyle(17px, 24px, bold);
     display: flex;
@@ -75,20 +97,11 @@
     border-right: 1px solid #ececec;
   }
 
-  .user-menu__search::before {
-    top: 34px;
-  }
-
   .user-menu__item--cart {
     width: 220px;
     height: 90px;
     margin-left: auto;
     text-align: right;
-  }
-
-  .user-menu__cart::before {
-    top: 34px;
-    left: -13px;
   }
 
   .user-menu__item--delivery {
@@ -100,6 +113,15 @@
     font-weight: normal;
     color: #444444;
     padding-top: 15px;
+  }
+
+  .user-menu__search-icon,
+  .user-menu__cart-icon {
+    top: 33px;
+  }
+
+  .user-menu__cart-icon {
+    left: -12px;
   }
 }
 
@@ -135,14 +157,13 @@
     text-align: right;
   }
 
-  .user-menu__cart::before {
-    top: 34px;
-    left: -35px;
-  }
-
   .user-menu__item--delivery {
     height: 35px;
     margin-left: auto;
     padding-top: 16px;
+  }
+
+  .user-menu__cart-icon {
+    left: -35px;
   }
 }
