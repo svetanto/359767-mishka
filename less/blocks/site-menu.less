@@ -31,13 +31,15 @@
 }
 
 .site-menu__text {
-    &:focus,
-    &:hover {
-      opacity: 0.6;
-    }
-    &:active {
-      opacity: 0.3;
-    }
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .site-menu__item--nomobile {
@@ -47,12 +49,12 @@
 // Планшетная версия -----------------------------------------------------------
 
 @media @tablet {
-
   .site-menu--closed {
     display: none;
     position: inherit;
     top: 0;
   }
+
   .site-menu {
     opacity: 1;
     width: 305px;
