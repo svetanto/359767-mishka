@@ -8,13 +8,34 @@
   margin-bottom: 30px;
 }
 
-.itemcard:hover .itemcard__name {
+.itemcard:hover .itemcard__name,
+.itemcard:focus .itemcard__name {
   opacity: 0.6;
 }
 
 .itemcard:active .itemcard__name {
   opacity: 0.3;
 }
+
+.itemcard:hover .itemcard__text,
+.itemcard:focus .itemcard__text {
+  box-shadow: 0 5px 15px 0 #cccccc;
+}
+
+.itemcard:active .itemcard__text {
+  box-shadow: 0 0 5px 0 #cccccc;
+}
+
+.itemcard:hover .itemcard__cart,
+.itemcard:focus .itemcard__cart {
+  opacity: 1;
+  fill: #63d1bb;
+}
+
+.itemcard:active .itemcard__cart {
+  opacity: 0.3;
+}
+
 
 .itemcard__photo {
   height: 195px;
@@ -24,15 +45,6 @@
 .itemcard__text {
   padding-top: 27px;
   margin-top: -7px;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 5px 15px 0 #cccccc;
-  }
-
-  &:active {
-    box-shadow: 0 0 5px 0 #cccccc;
-  }
 }
 
 .itemcard__name-spec {
@@ -80,16 +92,6 @@
   height: 19px;
   opacity: 0.2;
   fill: #000000;
-}
-
-.itemcard__text:hover .itemcard__cart {
-  opacity: 1;
-  fill: #63d1bb;
-}
-
-.itemcard__text:active .itemcard__cart {
-  opacity: 0.3;
-  // fill: #63d1bb;
 }
 
 // Планшетная версия -----------------------------------------------------------
