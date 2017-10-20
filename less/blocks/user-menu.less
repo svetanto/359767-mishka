@@ -4,13 +4,19 @@
   z-index: 10;
   .liststyle();
   .textstyle();
+  display: none;
 }
 
 .user-menu--closed {
   position: absolute;
+  display: block;
   top: 238px;
   opacity: 0;
   transition-duration: 0.5s;
+}
+
+.user-menu--hidden {
+  // display: none;
 }
 
 .user-menu--open {
