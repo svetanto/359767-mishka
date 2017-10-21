@@ -1,0 +1,1 @@
+var modal_open_button=document.querySelector(".week-product__link"),modal_window=document.querySelector(".cart-popup");modal_open_button.addEventListener("click",function(o){o.preventDefault(),modal_window.classList.add("cart-popup--show")}),window.addEventListener("keydown",function(o){27==o.keyCode&&modal_window.classList.remove("cart-popup--show")});
