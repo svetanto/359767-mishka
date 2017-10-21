@@ -8,9 +8,14 @@
 
 .user-menu--closed {
   position: absolute;
+  display: block;
   top: 238px;
   opacity: 0;
   transition-duration: 0.5s;
+}
+
+.user-menu--hidden {
+  display: none;
 }
 
 .user-menu--open {
@@ -48,6 +53,16 @@
 
 .user-menu__item:focus .user-menu__icon,
 .user-menu__item:hover .user-menu__icon {
+  fill: #63d1bb;
+}
+
+.user-menu__search:focus .user-menu__icon,
+.user-menu__search:hover .user-menu__icon {
+  fill: #63d1bb;
+}
+
+.user-menu__cart:focus .user-menu__icon,
+.user-menu__cart:hover .user-menu__icon {
   fill: #63d1bb;
 }
 
