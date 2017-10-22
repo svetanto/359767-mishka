@@ -31,6 +31,10 @@ gulp.task("serve", function() {
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html", ["html"]);
   gulp.watch("js/*.js", ["minjs"]);
+  gulp.watch("build/css/*.css").on("change", server.reload);
+  gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("build/js/*.js").on("change", server.reload);
+
 });
 
 // Создание webp-версий изображений --------------------------------------------
@@ -80,6 +84,7 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 // Минимизация JS --------------------------------------------------------------
