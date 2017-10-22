@@ -94,7 +94,7 @@
 
 @media @tablet {
   .production {
-    height: 745px;
+    min-height: 745px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -121,6 +121,7 @@
     order: 2;
     margin: 0 auto;
     width: 584px;
+    margin-bottom: 50px;
   }
 
   .production__video {
@@ -160,9 +161,12 @@
 
 @media @desktop {
   .production {
-    height: 455px;
-    justify-content: flex-start;
+    min-height: 455px;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
     margin-bottom: 105px;
     margin-top: 55px;
   }
@@ -171,6 +175,7 @@
     width: 682px;
     margin: 0;
     background: url("../img/video-desktop@1x.jpg") no-repeat;
+    order: 2;
   }
 
   @media (min-resolution: 1.5dppx) {
@@ -184,34 +189,44 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-grow: 1;
     margin: 0;
-    margin-left: 24px;
-    margin-top: 48px;
+    margin-left: 80px;
+    margin-top: 45px;
+    order: 1;
   }
 
   .production__title {
     width: 230px;
     margin: 0;
-    margin-top: 27px;
-    margin-bottom: 34px;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 
   .production__annotation-link {
     margin: 0;
     width: 230px;
-    margin-left: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-right: 55px;
+    margin-top: -265px;
   }
 
   .production__annotation {
     width: 230px;
     margin: 0;
-    // margin-top: 14px;
-    // margin-bottom: 34px;
   }
 
   .production__link {
     margin: 0;
-    margin-top: 45px;
+    margin-top: 43px;
+    margin-bottom: 20px;
     width: 230px;
+  }
+
+  .production__icon {
+    width: 30px;
+    height: 30px;
   }
 }
